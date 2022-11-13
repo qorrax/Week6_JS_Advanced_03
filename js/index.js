@@ -36,6 +36,9 @@ const siteContent = {
       "copyright" : "Copyright Great Idea! 2018"
     },
   };
+
+
+    
   
   // Example: Update the img src for the logo
   let logo = document.getElementById("logo-img");
@@ -47,14 +50,69 @@ const siteContent = {
    bigTitle.textContent = siteContent["cta"]["h1"]
 
 
-   const newElements = document.querySelector("nav")
-   newElements.textContent = siteContent["nav"]["nav-item-1"]
+  
 
-   const secondItem = document.querySelector("nav")
-   secondItem.textContent = siteContent["nav"]["nav-item-2"]
+  
 
     const imgHeader = document.querySelector("#cta-img" )
      imgHeader.setAttribute("src",siteContent["cta"]["img-src"])
 
-     const mainButton = document.querySelector(".cta-text, button" )
-     mainButton.textContent = siteContent["cta"]["button"]
+     const startButton = document.querySelector(".cta-text")
+     startButton.textContent = siteContent["cta"]["button"]
+
+     const midPic = document.querySelector(" .middle-img")
+      midPic.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+  
+
+      const topContent = document.querySelectorAll(".top-content")
+        topContent.textContent = siteContent["main-content"]["features-h4"]["features-content"]
+
+
+        const aboutContent = document.querySelector(".text-content")
+        aboutContent.textContent = siteContent["main-content"]["about-content"]
+    
+
+        const featuresContent = document.querySelector(".text-content")
+        featuresContent.textContent = siteContent["main-content"]["features-content"]
+   
+      const bottomContent = document.querySelectorAll(".bottom-content")
+      bottomContent.textContent = siteContent["main-content"]["product-h4"]
+
+       const productContent = document.querySelector(".bottom-content ")
+       productContent.textContent = siteContent["main-content"]["product-content"]
+
+
+    const domText = document.querySelector(".cta-text, h1")
+     domText.textContent = siteContent["cta"].h1
+
+     
+     const texts = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact'];
+     const as = document.querySelectorAll('a');
+     texts.forEach((text, i) => {
+       as[i].textContent = text;
+       as[i].style.color = "green";
+      
+      
+     });
+
+
+
+
+     const elements = siteContent["contact"];
+
+     const header = document.querySelector(".contact h4")
+     header.textContent = elements["contact-h4"]
+
+     const ParaContact = document.querySelectorAll(".contact p ")
+       ParaContact[0].textContent = elements["address"]
+       ParaContact[1].textContent = elements["phone"]
+       ParaContact[2].textContent = elements["email"]
+
+       
+    
+
+     const footer = document.querySelector(" footer p")
+      footer.textContent = siteContent["footer"]["copyright"]
+       console.log(footer)
+
+      
