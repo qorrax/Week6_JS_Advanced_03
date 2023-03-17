@@ -50,8 +50,10 @@ const siteContent = {
    bigTitle.textContent = siteContent["cta"]["h1"]
 
 
-  
+     const mainButton = document.getElementsByClassName(".cta .cta-text button")
+      mainButton.textContent = siteContent["cta"]["button"]
 
+        
   
 
     const imgHeader = document.querySelector("#cta-img" )
@@ -60,29 +62,38 @@ const siteContent = {
      const startButton = document.querySelector(".cta-text")
      startButton.textContent = siteContent["cta"]["button"]
 
-     const midPic = document.querySelector(" .middle-img")
-      midPic.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+
+     const topSection  = document.querySelectorAll(".top-content .text-content")
+       topSection.forEach(content => {
+        const paragraphs = document.querySelectorAll("p,h4")       
+      
+      paragraphs.forEach(paragraph => {
+        console.log(paragraph.textContent);
+
+      });
+      
+            
+      });
+
+
+
+    //  const midPic = document.querySelector(" .middle-img")
+    //   midPic.setAttribute("src", siteContent["main-content"]["middle-img-src"])
   
 
-      const topContent = document.querySelectorAll(".top-content")
-        topContent.textContent = siteContent["main-content"]["features-h4"]["features-content"]
-
-
-        const aboutContent = document.querySelector(".text-content")
-        aboutContent.textContent = siteContent["main-content"]["about-content"]
     
 
-        const featuresContent = document.querySelector(".text-content")
-        featuresContent.textContent = siteContent["main-content"]["features-content"]
+      //   const featuresContent = document.querySelector(".text-content")
+      //   featuresContent.textContent = siteContent["main-content"]["features-content"]
    
-      const bottomContent = document.querySelectorAll(".bottom-content")
-      bottomContent.textContent = siteContent["main-content"]["product-h4"]
+      
 
-       const productContent = document.querySelector(".bottom-content ")
-       productContent.textContent = siteContent["main-content"]["product-content"]
+      //  const productContent = document.querySelector(".bottom-content ")
+      //  productContent.textContent = siteContent["main-content"]["product-content"]
 
 
-    const domText = document.querySelector(".cta-text, h1")
+    const domText = document.querySelector(".cta .cta-text, h1")
      domText.textContent = siteContent["cta"].h1
 
      
@@ -96,12 +107,12 @@ const siteContent = {
      });
 
 
-
-
      const elements = siteContent["contact"];
 
      const header = document.querySelector(".contact h4")
      header.textContent = elements["contact-h4"]
+
+     
 
      const ParaContact = document.querySelectorAll(".contact p ")
        ParaContact[0].textContent = elements["address"]
@@ -113,6 +124,11 @@ const siteContent = {
 
      const footer = document.querySelector(" footer p")
       footer.textContent = siteContent["footer"]["copyright"]
-       console.log(footer)
+        
+    
+     
+  
 
-      
+    
+
+    
